@@ -6,7 +6,7 @@ describe('auth', function () {
     it('succesful log in', function () {
         request
             .post('/auth')
-            .send({login: 'adminius', password: 'supertest'})
+            .send({login: 'adminius', password: 'supers3cret'})
             .end(function (err, res) {
                 expect(res.statusCode).to.eq(200);
                 expect(res.body.token).not.to.be.undefined;
